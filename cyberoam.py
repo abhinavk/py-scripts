@@ -1,4 +1,5 @@
 # Cyberoam.py
+# A login interface written in Python for the Cyberoam firewall system
 # copyright Abhinav Kumar me@abhinavk.me
 
 import urllib.request
@@ -99,4 +100,4 @@ if __name__ == '__main__':
         else:
             print('Wrong syntax')
     else:
-        print('Invalid number arguments. Quitting...')
+        print('Invalid number of arguments. Quitting...')
