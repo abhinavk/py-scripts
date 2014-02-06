@@ -52,6 +52,9 @@ def login(usr='', pwd='', keep_alive=1, display_logs=1):
 
 
 def keep_alive():
+    '''
+    Polls the server every 3 minutes to acknowledge
+    '''
     param = {'mode': '192', 'username': data['username'],
              'password': data['password'],
              'a': str(int(time.time()*1000))}
@@ -70,7 +73,9 @@ def keep_alive():
 
 
 def logout(usr):
-    '''Logs out the specified username passed as only parameter'''
+    '''
+    Logs out the specified username passed as only parameter
+    '''
     data['username'] = usr
     if logged_in is True:
         param = {'mode': '193', 'username': data['username'],
